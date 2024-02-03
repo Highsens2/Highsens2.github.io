@@ -1,0 +1,149 @@
+html{
+    background-color: black;
+  }
+  
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+  
+  body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url('/images/man_grilling.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.5; /* Change this value to adjust the opacity */
+  }
+
+.nav{
+    margin: 0px;
+    padding: 0px;
+    height: 125px;
+    width: 100%;
+    background-color: #272727;
+    position: fixed;
+    overflow: hidden;
+    align-items: center;
+}
+
+.logoimage {
+    position: absolute;
+    z-index: 10;
+    left: 39%;
+
+    width: 325px;
+    height: 200px;
+
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+#home{
+    position: fixed;
+    top: 7%;
+    margin-left: 6.5%;
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-size: 1.5em;
+}
+
+
+#location{
+    position: fixed;
+    top: 7%;
+    margin-left: 18%;
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-size: 1.5em;
+}
+
+#reservation{
+    position: fixed;
+    top: 7%;
+    margin-left: 31%;
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-size: 1.5em;
+}
+
+#event{
+    position: fixed;
+    top: 7%;
+    margin-left: 63%;
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-size: 1.5em;
+}
+
+#order{
+    position: fixed;
+    top: 7%;
+    margin-left: 78%;
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-size: 1.5em;
+}
+
+
+#contact{
+    position: fixed;
+    top: 7%;
+    margin-left: 90%;
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-size: 1.5em;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

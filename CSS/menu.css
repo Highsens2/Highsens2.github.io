@@ -1,0 +1,406 @@
+html{
+  background-color: black;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url('/images/man_grilling.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.5; /* Change this value to adjust the opacity */
+}
+  
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+
+.nav{
+    margin: 0px;
+    padding: 0px;
+    height: 125px;
+    width: 100%;
+    background-color: #272727;
+    position: fixed;
+    overflow: hidden;
+    align-items: center;
+}
+
+.logoimage {
+    position: absolute;
+    z-index: 10;
+    left: 39%;
+
+    width: 325px;
+    height: 200px;
+
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+#home{
+    position: fixed;
+    top: 7%;
+    margin-left: 6.5%;
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-size: 1.5em;
+}
+
+
+#location{
+    position: fixed;
+    top: 7%;
+    margin-left: 18%;
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-size: 1.5em;
+}
+
+#reservation{
+    position: fixed;
+    top: 7%;
+    margin-left: 31%;
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-size: 1.5em;
+}
+
+#event{
+    position: fixed;
+    top: 7%;
+    margin-left: 63%;
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-size: 1.5em;
+}
+
+#order{
+    position: fixed;
+    top: 7%;
+    margin-left: 78%;
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-size: 1.5em;
+}
+
+
+#contact{
+    position: fixed;
+    top: 7%;
+    margin-left: 90%;
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-size: 1.5em;
+}
+
+.Locations {
+    background-color: lightgray;
+    top: 15%;
+    right: 45%;
+    opacity: 0.8;
+    width: 75px;
+    color: black;
+    position: fixed;
+    text-align: center;
+
+    
+}
+
+#button{
+    position: fixed;
+    top: 6%;
+    margin-left: 95%;
+    color: white;
+    display: none;
+
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: -1;
+    top: 15%;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+
+
+  
+
+
+
+  @media screen and (max-width: 1010px) {
+
+    #event {
+      display: none;
+    }
+  
+    #order {
+      margin-left: 69%;
+    }
+  
+    #contact {
+      margin-left: 81%;
+    }
+  
+    #button {
+      display: block;
+    }
+  
+  }
+  
+  
+  @media screen and (max-width: 850px) {
+    #home {
+        display: none;
+    }
+  
+    #location {
+        margin-left: 6%;
+    }
+  
+    #reservation {
+        margin-left: 22%;
+    }
+  
+    .logoimage {
+        position: absolute;
+        z-index: 10;
+        margin-left: 32.3%;
+    
+        width: 245px;
+        height: 200px;
+    }
+  
+    @media screen and (max-width: 785px) {
+  
+      .logoimage {
+        position: absolute;
+        z-index: 10;
+        margin-left: 27%;
+    
+        width: 245px;
+        height: 200px;
+    }
+  
+    #reservation {
+      display: none;
+    }
+  
+    #order {
+      display: none;
+    }
+  
+    #contact {
+      display: none;
+    }
+  
+    #location{
+      display: none;
+    }
+  
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+  
+    .logoimage {
+      position: absolute;
+      z-index: 10;
+      margin-left: 8%;
+  
+      width: 185px;
+      height: 195px;
+  }
+  
+  #reservation {
+    display: none;
+  }
+  
+  #order {
+    display: none;
+  }
+  
+  #contact {
+    display: none;
+  }
+  
+  #location{
+    display: none;
+  }
+  
+  .sidenav {
+    z-index: 5;
+  }
+  }
+
+
+  .imagemenu {
+    width: auto;
+    height: auto;
+
+    top: 18%;
+    left: .5%;
+
+    
+  }
+
+
+
+  .food-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: black;
+    /* Change cursor to pointer on hover */
+    }
+
+    .food-item span {
+    margin-right: 80%;
+    font-size: 25px;
+    }
+
+    .food-item p {
+      margin-right: 80%;
+      font-size: 18px;
+      }
+
+
+    .cart-icon-container {
+    position: absolute;
+    top: 90%;
+    left: 91%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    }
+    .cart-icon {
+    
+    font-size: 24px;
+    color: green;
+    position: relative;
+    }
+    .cart-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    }
+    .cart-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 2;
+    }
+    .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    }
+
+.purchasebox {
+  top: 20%;
+  width: max-content;
+
+}
+
+.box {
+  border-width: 0px;
+  border-style: hidden;
+  border-color: #2eb9ce;
+  background-color: rgba(235, 235, 235, 0.5);
+  display: none;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  width: 550px;
+  height: 535px;
+  top: 25%;
+  left: 31%;
+  position: relative; /* Set position to relative */
+}
+
+.addbutton {
+  position: absolute; /* Set position to absolute */
+  top: 0; /* Align to the top */
+  right: 0; /* Align to the right */
+}
+
+#closeButton {
+  top: 0; /* Align to the top */
+  right: 0; /* Align to the right */
+  border-radius: 5px;
+  font-size: 28px;
+  position: absolute; /* Set position to absolute */
+  background-color: transparent;
+}
+
+#menuimg {
+  top: 5%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}

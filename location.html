@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Day Grill</title>
+    <link rel="stylesheet" href="/CSS/location.css">
+</head>
+<body>
+    
+    <header>
+    
+
+        <img  class="logoimage" src="images/GRILL.png" alt="Fork Stabbing Sausage">
+    
+        <div class="nav">
+            <a href="index.html" id="home"> Home </a>
+            <a href="location.html" id="location">Location</a>
+            <a href="reservation.html" id="reservation">Reservation</a>
+            <a href="event.html" id="event">Events</a>
+            <a href="menu.html" id="order">Order</a>
+            <a href="contact.html" id="contact">Contact</a>
+            <span id="button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>S
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+          
+    </header>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <select id="LocationDrop">
+        <option value="yukon">Yukon</option>
+        <option value="okc">OKC</option>
+        <option value="tulsa">Tulsa</option>
+        <option value="norman">Norman</option>
+    </select>
+    
+    <div id="iframe-container-yukon" class="iframe-container active">
+        <iframe  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1777%20S%20Yukon%20Pkwy,%20Yukon,%20OK%2073099+(Yukon)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/" id="yukon_iframe">Yukon Location</a></iframe>
+    </div>
+    
+    <div id="iframe-container-okc" class="iframe-container">
+        <iframe  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1901%20SE%2015th%20St,%20Oklahoma%20City,%20OK%2073129+(Oklahoma%20City)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/" id="oklahoma_iframe">OKC Location</a></iframe>
+    </div>
+    
+    <div id="iframe-container-tulsa" class="iframe-container">
+        <iframe  src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=5840%20S%20Hudson%20Ave,%20Tulsa,%20OK%2074135+(Oklahoma%20City)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/" id="tulsa_iframe">Tulsa location</a></iframe>
+    </div>
+    
+    <div id="iframe-container-norman" class="iframe-container">
+        <iframe src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=%20911%20W%20Main%20St,%20Norman,%20OK%2073069+(Oklahoma%20City)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/" id="norman_iframe">Norman Location</a></iframe>
+    </div>
+<script>
+document.getElementById('LocationDrop').addEventListener('change', function() {
+    var selectedLocation = this.value;
+    var iframeContainers = document.querySelectorAll('.iframe-container');
+
+        iframeContainers.forEach(function(container) {
+            if (container.id.includes(selectedLocation)) {
+                container.classList.add('active');
+            } else {
+                container.classList.remove('active');
+            }
+        });
+    });
+</script>
+
+
+
+    <footer>
+        These locations are for a Highschool in each city, They DO NOT go to a real restraunt!
+    </footer>
+
+
+<script src="/js/location.js"></script>
+</body>
+</html> 
